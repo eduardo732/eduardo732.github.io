@@ -1,19 +1,20 @@
-import StyledContainer from "./components/StyledContainer" 
-import StyledCard from "./components/StyledCard"
-import StyledInfoSide from "./components/StyledInfoSide"
-import StyledImageSide from "./components/StyledImageSide"
 
+import { useRoutes } from "react-router-dom"
+import Success from "./pages/Success"
+import Home from "./pages/Home"
 
-
-function App() {
-  return (
-      <StyledContainer>
-        <StyledCard>
-          <StyledInfoSide/>
-          <StyledImageSide/>
-        </StyledCard>
-      </StyledContainer>
-  );
+const App = () => {
+  const routes = useRoutes([
+    {
+      path: "/",
+      element: <Home />,
+    },
+    {
+      path: "/success",
+      element: <Success />
+    }
+  ])
+  return routes
 }
 
 export default App;

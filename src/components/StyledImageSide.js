@@ -5,7 +5,7 @@ const StyledImgDiv = styled.div`
 	width: 50%;
 	height: 90%;
 	margin: auto;
-	@media (max-width: 400px) {
+	@media (max-width: 450px) {
     height:100%;
     flex-direction: column-reverse;
 		width:100%;
@@ -14,11 +14,9 @@ const StyledImgDiv = styled.div`
 
 
 const StyledImageSide = () => {
-	const isMobile = window.innerWidth <= 400
-	const imageSrc = isMobile ? "" : "/images/illustration-sign-up-desktop.svg"
 	return(
 		<StyledImgDiv>
-			<StyledImg src={imageSrc} alt="desktop"/>
+			<StyledImg src="/newsletter/images/illustration-sign-up-desktop.svg"/>
 		</StyledImgDiv>
 	)
 }

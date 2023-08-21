@@ -31,8 +31,6 @@ const StyledErrorMessage = styled(ErrorMessage)`
   font-size: 14px;
 `;
 
-
-
 const StyledLabel = styled.label`
 	font-weight: bold;
 	font-size: 12px;

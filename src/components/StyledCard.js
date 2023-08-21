@@ -6,7 +6,7 @@ const StyledCard = styled.div`
   display: flex;
   flex-direction: row;
   border-radius: 30px;
-  @media (max-width: 400px) {
+  @media (max-width: 450px) {
     height:100%;
     flex-direction: column-reverse;
   }

@@ -47,7 +47,7 @@ const Success = ({ children }) => {
 		<StyledContainer>
 			<StyledInfo>
 				<StyledDivIcon>
-					<StyledImageWithouthBackground src="/images/icon-success.svg" alt="desktop" />
+					<StyledImageWithouthBackground src="/newsletter/images/icon-success.svg" alt="desktop" />
 				</StyledDivIcon>
 				<StyledDivInfo>
 					<StyledTitle>Thanks for subscribing!</StyledTitle>

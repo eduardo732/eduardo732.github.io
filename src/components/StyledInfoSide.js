@@ -21,7 +21,7 @@ const StyledListItem = styled.li`
   position: relative;
   padding-left: 30px; /* Space for the icon */
   margin-bottom: 10px;
-  background-image: url('/images/icon-list.svg'); /* Replace with your image path */
+  background-image: url('/newsletter/images/icon-list.svg'); 
   background-repeat: no-repeat;
   background-size: 15px; /* Adjust the size as needed */
   background-position: left center;
