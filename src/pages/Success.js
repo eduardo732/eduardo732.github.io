@@ -3,7 +3,7 @@ import StyledCard from "../components/StyledCard"
 import { styled } from "styled-components"
 import StyledImg from "../components/StyledImg"
 import StyledButton from "../components/StyledButton"
-import { useNavigate } from "react-router-dom"
+import { useLocation, useNavigate } from "react-router-dom"
 
 const StyledInfo = styled(StyledCard)`
 	flex-direction: column;
@@ -37,9 +37,10 @@ const StyledP = styled.p`
 const StyledButtonDismiss = styled(StyledButton)`
 	width: 80%;
 `
-const Success = ({ children }) => {
+const Success = () => {
 	const navigate = useNavigate()
-
+	const location = useLocation()
+	const email = location.state.email
 	const handleSubmit = (e) => {
 		navigate('/')
 	}
@@ -51,7 +52,7 @@ const Success = ({ children }) => {
 				</StyledDivIcon>
 				<StyledDivInfo>
 					<StyledTitle>Thanks for subscribing!</StyledTitle>
-					<StyledP>A confirmation email has been sent to <strong>{children}</strong>. Please open it and click the button inside to confirm your subscription. </StyledP>
+					<StyledP>A confirmation email has been sent to <strong>{email}</strong>. Please open it and click the button inside to confirm your subscription. </StyledP>
 					<StyledButtonDismiss type="submit" onClick={handleSubmit}>Dismiss message</StyledButtonDismiss>
 				</StyledDivInfo>
 			</StyledInfo>

@@ -52,7 +52,11 @@ const EmailForm = () => {
 	})
 
 	const handleSubmit = (e) => {
-		navigate('success')
+		navigate('success', {
+			state: {
+				email: e.email
+			}	
+		})
   };
 
 	return (
