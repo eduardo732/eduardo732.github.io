@@ -6,16 +6,19 @@ import Success from './pages/Success'
 import reportWebVitals from './reportWebVitals';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App/>,
-  },
-  {
-    path: "/success",
-    element: <Success/>
-  }
-])
+const router = createBrowserRouter({
+  basename: "/newsletter",
+  routes: [
+    {
+      path: "/",
+      element: <App />,
+    },
+    {
+      path: "/success",
+      element: <Success />
+    }
+  ]
+})
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
